@@ -52,7 +52,7 @@ CompassCompilerPlugin.prototype.toTree = function(tree, inputPath, outputPath, i
       destDir: outputDir,
       files: [fileName],
       getDestinationPath: function(relativePath) {
-        if (relativePath === path.join(this.destDir, fileName)) { return path.join(this.destDir, outputFileName); }
+        if (relativePath === path.join(outputDir, fileName)) { return path.join(outputDir, outputFileName); }
         return relativePath;
       }
     });
